@@ -5,13 +5,13 @@ import openai
 import pyttsx3
 import datetime
 import random
-
+from config import api_key
 chatStr = " "
 
 def chat(query):
     global chatStr
     print(chatStr)
-    openai.api_key = "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" 
+    openai.api_key = "api_key" 
     chatStr += f"Sarim: {query}\n Jarvis: "
     response = openai.Completion.create(
         model="text-davinci-003",
